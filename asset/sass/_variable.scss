@@ -1,0 +1,11 @@
+
+/* This are media query breakpoints */
+/* Note that 320px is the default am using mobile-first approach */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+$primary-font: 'Roboto Condensed', sans-serif;
+
+$mediaMaxWidth: 1200px;
+$mediaMiniLaptop: 992px;
+$mediaTablet: 768px;
+$mediaSmallerTab: 576px;

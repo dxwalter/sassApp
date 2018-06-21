@@ -1,0 +1,13 @@
+@import '_variable';
+
+@import '_navBar';
+
+*{
+	margin: 0;
+	padding: 0;	
+}
+body {
+	background-color:  #060815;
+	width: 100%;
+	height: inherit;
+}

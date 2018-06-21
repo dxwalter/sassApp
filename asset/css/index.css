@@ -1,0 +1,121 @@
+/* This are media query breakpoints */
+/* Note that 320px is the default am using mobile-first approach */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+.nav {
+  width: 100%;
+  height: 50px;
+  background-color: #04040e;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100%;
+  grid-template-areas: "a1 a1 a2 a2 a3 a3 a3 a3 a3 a3 a4 a4";
+}
+@media (min-width: 576px) {
+  .nav {
+    grid-template-areas: "a1 a1 a2 a2 a2 a2 a3 a3 a3 a3 a3 a4";
+  }
+}
+@media (min-width: 992px) {
+  .nav {
+    grid-template-areas: "a1 a1 a2 a2 a2 a2 a2 a2 a2 a2 a3 a3";
+  }
+}
+.nav .navLogo {
+  width: 50px;
+  height: auto;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  padding-top: 10px;
+  text-align: center;
+  grid-area: a1;
+  background-color: inherit;
+}
+@media (min-width: 576px) {
+  .nav .navLogo {
+    margin-left: 30px;
+  }
+}
+.nav .navMenu {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  grid-area: a2;
+  color: #fff;
+  margin-right: 10px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .nav .navMenu {
+    display: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  .nav .navMenu {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.nav .navMenu ul {
+  width: 100%;
+  background-color: inherit;
+}
+.nav .navMenu li {
+  display: inline-block;
+  text-decoration: none;
+}
+.nav .navMenu a {
+  display: block;
+  padding: 14px 39px;
+  color: #fff;
+  text-decoration: none;
+  height: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.nav .navMenu a:hover {
+  border-bottom: 2px solid #2960DC;
+  color: #2960DC;
+}
+.nav .navMenu .active {
+  border-bottom: 2px solid #2960DC;
+  color: #2960DC;
+}
+.nav .userLink {
+  grid-area: a3;
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+}
+.nav .handMenu {
+  width: 60px;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background-color: blue;
+  grid-area: a4;
+  color: #fff;
+}
+@media (min-width: 576px) {
+  .nav .handMenu {
+    width: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .nav .handMenu {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #060815;
+  width: 100%;
+  height: inherit;
+}
+
+/*# sourceMappingURL=index.css.map */

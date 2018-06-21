@@ -1,0 +1,110 @@
+
+.nav {
+	width: 100%;
+	height: 50px;
+	background-color: #04040e;
+	display: grid;
+	position: relative;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 100%;
+	grid-template-areas: 
+	"a1 a1 a2 a2 a3 a3 a3 a3 a3 a3 a4 a4";
+
+	@media (min-width: $mediaSmallerTab) {
+		grid-template-areas: 
+		"a1 a1 a2 a2 a2 a2 a3 a3 a3 a3 a3 a4";
+	}
+
+	@media (min-width: $mediaMiniLaptop) {
+		grid-template-areas: 
+		"a1 a1 a2 a2 a2 a2 a2 a2 a2 a2 a3 a3";
+	}
+
+	.navLogo{
+		width: 50px;
+		height: auto;
+		font-family: $primary-font;
+		color: #fff;
+		font-size: 20px;
+		padding-top: 10px;
+		text-align: center;
+		grid-area: a1;
+		background-color: inherit;
+
+		@media (min-width: $mediaSmallerTab) {
+			margin-left: 30px;
+		}
+	}
+	.navMenu {
+		width: 90%;
+		margin: 0 auto;
+		height: 100%;
+		grid-area: a2;
+		color: #fff;
+		margin-right: 10px;
+		display: none;
+
+		@media (min-width: $mediaMiniLaptop) {
+			display: inherit;
+		}
+
+		@media (min-width: $mediaMaxWidth) {
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		ul {
+			width: 100%;
+			background-color: inherit;
+		}
+
+		li {
+			display: inline-block;
+			text-decoration: none;
+		}
+		a {
+			display: block;
+			padding: 14px 39px;
+			color: #fff;
+			text-decoration: none;
+			height: 100%;
+			font-family: $primary-font;
+		}
+		a:hover { 
+			border-bottom: 2px solid #2960DC;
+			color: #2960DC;
+		}
+
+		.active { 
+			border-bottom: 2px solid #2960DC;
+			color: #2960DC;
+		}
+
+
+	}
+	.userLink {
+		grid-area: a3;
+		height: 100%;
+		width: 100%;
+		background-color: yellow;
+	}
+	.handMenu {
+		width: 60px;
+		position: absolute;
+		right: 0;
+		height: 100%;
+		background-color: blue;
+		grid-area: a4;
+		color: #fff;
+
+		@media (min-width: $mediaSmallerTab) {
+			width: 80px;
+		}
+
+		@media (min-width: $mediaMiniLaptop) {
+			display: none;
+		}
+	}
+
+
+}
